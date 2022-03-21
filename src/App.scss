@@ -1,0 +1,58 @@
+@import url('https://cdn.jsdelivr.net/npm/pixeden-stroke-7-icon@1.2.3/pe-icon-7-stroke/dist/pe-icon-7-stroke.min.css');
+
+$dark: #090304;
+$light: #ffffff;
+
+.line{
+  border-left: 2px dotted $dark;
+  height: 80%;
+  z-index: 0;
+  position: absolute;
+}
+
+.steps{
+  position: relative;
+  margin-left: 1rem;
+
+  .circle{
+    height: 25px;
+    width: 25px;
+    border-radius: 100%;
+    background: $light;
+    border: 2px solid $dark;
+    z-index: +1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .icon img{
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  .circle-filled{
+    background: $dark;
+    border: 2px solid $dark;
+  }
+
+  .step{
+    margin-left: -13.5px;
+    z-index: +1;
+    height: 120px;
+
+    .step-text{
+      margin-left: 1rem;
+      margin-top: -0.2rem;
+
+      h3{
+        margin: -2px 0 0 0 !important;
+      }
+
+      p{
+        margin: 0;
+        opacity: 0.8;
+      }
+    }
+  }
+}

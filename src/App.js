@@ -1,107 +1,71 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-import './App.css';
+import './App.scss';
+import Logo from './images/logo.svg';
+import Tick from './images/tick.png';
 
 //Bootstrap for responsiveness
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-class App extends React.Component {
-  render() {
-    return (
-      <div className="main_container">
-        <h1>Tesla Order Tracker</h1>
+function App(props) {
 
-        <div class="container padding-bottom-3x mb-1">
-          <div class="card mb-3">
-            <div class="p-4 text-center text-white text-lg bg-dark rounded-top">
-              <span class="text-uppercase">Tracking Order No - </span>
-              <span class="text-medium">001698653lp</span>
+    const [steps] = useState([
+        {no: 1, title: 'Order', description: 'Place your Shift 4 order.'},
+        {no: 1, title: 'Underwriting', description: 'Your order is being written.'},
+        {no: 2, title: 'Order Administrator', description: 'Your order is being administrated.'},
+        {no: 3, title: 'Order Services', description: 'You order is under services.'},
+        {no: 4, title: 'Deployment', description: 'Your are project is being deployed.'}
+    ]);
+
+    const [currentStep] = useState(3);
+
+    return (
+        <div className='content'>
+            <nav className="navbar navbar-expand-lg navbar-light px-3">
+                <a className="navbar-brand" href="#">
+                    <img style={{width: '144px'}} src={Logo} alt="logo" className='img-fluid' />
+                </a>
+            </nav>
+            <div className="content ms-5 mt-5">
+
+                <div className="card col-4">
+                    <div className='card-header d-flex p-4 justify-content-between align-items-center'>
+                        <div>
+                            <h2 className='card-title m-0 fw-bold'>Track Order</h2>
+                            <p className='m-0'>Here is what to expect before delivery.</p>
+                        </div>
+                        <p>Order id # 454674</p>
+                    </div>
+                    <div className='card-body'>
+                        <div className='steps'>
+                            <div className='line' />
+
+                            {steps.map(step => {
+                                return (
+                                    <div key={step.no} className={`step d-flex`}>
+
+                                        {step.no < currentStep ? (
+                                            <div className='circle circle-filled'>
+                                                <div className='icon'>
+                                                    <img src={Tick} alt='T' />
+                                                </div>
+                                            </div>
+                                        ): (
+                                            <div className='circle' />
+                                        )}
+                                        <div className='step-text'>
+                                            <h4 className='m-0'>{step.title}</h4>
+                                            <p>{step.description}</p>
+                                        </div>
+                                    </div>
+                                )
+                            })}
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="d-flex flex-wrap flex-sm-nowrap justify-content-between py-3 px-2 bg-secondary">
-              <div class="w-100 text-center py-1 px-2">
-                <span class="text-medium">Shipped Via:</span> UPS Ground
-              </div>
-              <div class="w-100 text-center py-1 px-2">
-                <span class="text-medium">Status:</span> Checking Quality
-              </div>
-              <div class="w-100 text-center py-1 px-2">
-                <span class="text-medium">Expected Date:</span> APR 27, 2022
-              </div>
-            </div>
-            <div class="card-body">
-              <div class="steps d-flex flex-wrap flex-sm-nowrap justify-content-between padding-top-2x padding-bottom-1x">
-                <div class="step completed">
-                  <div class="step-icon-wrap">
-                    <div class="step-icon">
-                      <i class="pe-7s-cart"></i>
-                    </div>
-                  </div>
-                  <h4 class="step-title">Order</h4>
-                </div>
-                <div class="step completed">
-                  <div class="step-icon-wrap">
-                    <div class="step-icon">
-                      <i class="pe-7s-config"></i>
-                    </div>
-                  </div>
-                  <h4 class="step-title">Prepare for Delivery</h4>
-                </div>
-                <div class="step completed">
-                  <div class="step-icon-wrap">
-                    <div class="step-icon">
-                      <i class="pe-7s-medal"></i>
-                    </div>
-                  </div>
-                  <h4 class="step-title">Appointment</h4>
-                </div>
-                <div class="step">
-                  <div class="step-icon-wrap">
-                    <div class="step-icon">
-                      <i class="pe-7s-car"></i>
-                    </div>
-                  </div>
-                  <h4 class="step-title">VIN</h4>
-                </div>
-                <div class="step">
-                  <div class="step-icon-wrap">
-                    <div class="step-icon">
-                      <i class="pe-7s-wallet"></i>
-                    </div>
-                  </div>
-                  <h4 class="step-title">Payment</h4>
-                </div>
-                <div class="step">
-                  <div class="step-icon-wrap">
-                    <div class="step-icon">
-                      <i class="pe-7s-home"></i>
-                    </div>
-                  </div>
-                  <h4 class="step-title">Delivery</h4>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="d-flex flex-wrap flex-md-nowrap justify-content-center justify-content-sm-between align-items-center">
-            <div class="custom-control custom-checkbox mr-3">
-              <input
-                class="custom-control-input"
-                type="checkbox"
-                id="notify_me"
-                checked=""
-              />
-              <label class="custom-control-label" for="notify_me">
-                Notify me when order is delivered
-              </label>
-            </div>
-            <div class="text-left text-sm-right">
-              <a class="btn btn-outline-primary btn-rounded btn-sm" href="#">
-                View Order Details
-              </a>
-            </div>
-          </div>
         </div>
-      </div>
-    );
-  }
+    )
 }
+
 export default App;
