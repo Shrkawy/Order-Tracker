@@ -21,7 +21,6 @@ $primary: #136EF6;
     border-radius: 100%;
     background: $light;
     border: 2px solid $dark;
-    z-index: +1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,6 +28,7 @@ $primary: #136EF6;
     .icon img {
       width: 12px;
       height: 12px;
+      margin-bottom: 0.2rem;
     }
   }
 
@@ -38,7 +38,7 @@ $primary: #136EF6;
   }
 
   .step {
-    margin-left: -13.5px;
+    margin-left: -12.5px;
     z-index: +1;
     min-height: 120px;
 
