@@ -1,6 +1,7 @@
 import TickImg from "../images/tick.png";
-import ProgressImg from "../images/progress.png";
 import React from "react";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faSpinner} from "@fortawesome/free-solid-svg-icons";
 
 const BlurbList = props => {
 
@@ -54,7 +55,7 @@ const BlurbList = props => {
         Blurb.map((blurb, index) => {
             return (
                 <div key={index} className='step d-flex'>
-                    <div style={{width: '30px', zIndex: '+5'}}>
+                    <div style={{width: '30px', zIndex: '+5', background: (index === Blurb.length-1 && props.stageIndex === 3) ? '#ffffff' : ''}}>
                         {(blurb.StartedOn && blurb.CompletedOn) ? (
                                 <div className='circle circle-filled'>
                                     <div className='icon'>
@@ -65,7 +66,7 @@ const BlurbList = props => {
                             (blurb.StartedOn) ? (
                                 <div className='circle'>
                                     <div className='icon'>
-                                        <img src={ProgressImg} alt='T'/>
+                                        <FontAwesomeIcon style={{width: '13px', color: '#136EF6'}} icon={faSpinner} spin />
                                     </div>
                                 </div>
                             ) : (
@@ -74,24 +75,6 @@ const BlurbList = props => {
                     </div>
                     <div className='step-text'>
                         <h4 className='m-0'>{blurb.Name}</h4>
-                        {blurb.StartedOn ?
-                            <p>
-                                <span className='fw-bold me-1'>Start Time:</span>
-                                {new Intl.DateTimeFormat('en-US', {
-                                    dateStyle: 'full',
-                                    timeStyle: 'long'
-                                }).format(new Date(blurb.StartedOn))}
-                            </p>
-                            : null}
-                        {blurb.CompletedOn ?
-                            <p>
-                                <span className='fw-bold me-1'>Complete Time:</span>
-                                {new Intl.DateTimeFormat('en-US', {
-                                    dateStyle: 'full',
-                                    timeStyle: 'long'
-                                }).format(new Date(blurb.CompletedOn))}
-                            </p>
-                            : null}
                         {getDescription(blurb) ? <p className='mt-1'>{getDescription(blurb)}</p> : null}
                     </div>
                 </div>

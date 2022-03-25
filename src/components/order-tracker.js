@@ -27,13 +27,6 @@ const OrderTracker = () => {
             });
     }, [orderId]);
 
-    const lineHeight = {
-        'Underwriting': '80%',
-        'Order Administration': '80%',
-        'Onsite Services': '73%',
-        'Deployment': '60%'
-    };
-
     return(
         <div className="content mx-5 my-5">
             {loading ? <p>Loading...</p> :
@@ -43,20 +36,21 @@ const OrderTracker = () => {
                             <h2 className='card-title m-0 fw-bold'>Track Order</h2>
                             <p className='m-0'>Here is what to expect before delivery.</p>
                             <br />
-                            <p className='mb-0'> <span className='fw-bold me-1'>Order Id</span> {orderId} </p>
+                            <p className='mb-0'> <span className='fw-bold me-1'>Order Id:</span> {orderId} </p>
                         </div>
-                        <div className='card-body'>
-                            {steps.map((step, index) => {
-                                return(
-                                    <div className='mt-3 mb-4' key={index}>
-                                        <h3 className='mt-2 mb-4'>Stage {index+1}: {step.StageName}</h3>
-                                        <div className='steps'>
-                                            <div className='line' style={{height: lineHeight[step.StageName]}} />
-                                            <BlurbList StageName={step.StageName} Blurb={step.Blurb} />
+                        <div className='card-body position-relative overflow-hidden'>
+                            <div className='mt-3 p-2'>
+                                <div className='line' style={{height: '95%', transform: 'translateX(1rem'}} />
+                                {steps.map((step, index) => {
+                                    return(
+                                        <div className='' key={index}>
+                                            <div className='steps'>
+                                                <BlurbList StageName={step.StageName} stageIndex={index} Blurb={step.Blurb} />
+                                            </div>
                                         </div>
-                                    </div>
-                                )
-                            })}
+                                    )
+                                })}
+                            </div>
                         </div>
                     </div>
             }
