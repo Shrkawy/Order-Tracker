@@ -6,7 +6,7 @@ import {faSpinner} from "@fortawesome/free-solid-svg-icons";
 const BlurbList = props => {
 
     const {StageName} = props;
-    const Blurb = JSON.parse(props.Blurb);
+    const Blurb = JSON.parse(props.Blurb).sort((a, b) => a.SequenceIndex - b.SequenceIndex);
     
     const getDescription = (blurb) => {
         
@@ -21,7 +21,7 @@ const BlurbList = props => {
         }
 
         if (StageName === 'Order Administration' && blurb.IsCurrent && !blurb.IsComplete && blurb.StartedOn && !blurb.CompletedOn && blurb.Name === 'Merchant Confirmation Form') {
-            description = "The Order is currently waiting on your input to continue. Please follow this link (INSERT LINK HERE) to confirm critical details about your Order.";
+            description = (<>The Order is currently waiting on your input to continue. Please follow <a href='/abc'>this link</a> to confirm critical details about your Order.</>);
         }
 
         if (StageName === 'Order Administration' && blurb.IsCurrent && !blurb.IsComplete && blurb.StartedOn && !blurb.CompletedOn && blurb.Name !== 'Merchant Confirmation Form') {
@@ -41,7 +41,7 @@ const BlurbList = props => {
         }
 
         if (StageName === "Deployment" && blurb.IsCurrent && !blurb.IsComplete && blurb.StartedOn && !blurb.CompletedOn) {
-            description = "Our team is scheduling your POS Installation with a preferred technician for (INSERT INSTALLATION DATE)";
+            description = `Our team is scheduling your POS Installation with a preferred technician for ${new Date().toLocaleDateString()}.`;
         }
 
         if (StageName === "Deployment" && !blurb.IsCurrent && blurb.IsComplete && blurb.StartedOn && blurb.CompletedOn) {
