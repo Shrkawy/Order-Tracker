@@ -1,0 +1,164 @@
+.filedrop_box {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 65%;
+  row-gap: 10px;
+  column-gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin: 8px 12px 8px 0px;
+  height: 300px;
+  min-height: 30%;
+  border-radius: 4px;
+  background-color: rgb(246, 250, 265);
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23B8B8B8FF' stroke-width='3' stroke-dasharray='3%2c 9' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+/* .myFileSelector {
+  appearance: none !important;
+  opacity: none !important;
+  background-color: red;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+} */
+
+.filedrop_icon {
+  text-align: center;
+  align-self: center;
+  color: rgb(152, 187, 243);
+}
+
+.filedrop_text {
+  text-align: center;
+  align-self: center;
+  line-height: 15px;
+  margin-top: 15px;
+  font-size: 18px;
+  font-family: "SofiaPro-Regular";
+}
+
+.filedrop_button {
+  opacity: 5;
+}
+.filedrop_button:focus,
+.filedrop_button:hover {
+  cursor: pointer;
+}
+/* .inputfile {
+  border: 20px solid black;
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+  
+} */
+.inputfile + label {
+  font-size: 1.25em;
+  font-weight: 700;
+  color: white;
+  background-color: red;
+  display: inline-block;
+  cursor: grab;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+  background: darken(#136ef6, 1.5%);
+  border: 1px solid rgba(#000, 0.05);
+  box-shadow: 1px 1px 2px rgba(#fff, 0.2);
+  color: lighten(#136ef6, 18%);
+  text-decoration: none;
+  text-shadow: -1px -1px 0 darken(#136ef6, 9.5%);
+  transition: all 250ms linear;
+  background-color: red;
+}
+/* .filebase_button {
+  border: 3px solid fuchsia;
+  width: 50px;
+} */
+
+Button.filebase_button {
+  appearance: none !important;
+  opacity: none !important;
+  color: red;
+  background-color: red;
+  border: 3px solid green;
+}
+#input > #FileBase64 {
+  background-color: red;
+  color: red;
+  border: 3px solid teal;
+  text-align: center !important;
+  align-self: center !important;
+  font-family: "SofiaPro-Regular" !important;
+  font-size: 20px !important;
+  width: 0 !important;
+  height: 0 !important;
+  opacity: 0 !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* #root
+  > div.App
+  > div.maincontent_flex
+  > div.uf_grid
+  > div.filedrop_box
+  > div:nth-child(1)
+  > label
+  > button
+  > * {
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  margin-top: -40px;
+  background-color: red;
+  color: #136ef6;
+  border: none;
+  text-align: center !important;
+  align-self: center !important;
+  font-family: "SofiaPro-Regular" !important;
+  font-size: 20px !important;
+  position: absolute;
+  padding: 0 !important;
+  width: fit-content;
+  height: 2.1em;
+  display: flex;
+  z-index: 2 !important;
+  cursor: pointer;
+} */
+
+.opacity_none {
+  opacity: 0 !important;
+}
+/* #root
+  > div.App
+  > div.maincontent_flex
+  > div.uf_grid
+  > div.filedrop_box
+  > div.filedrop_button
+  > span
+  > input[type="file"] {
+  width: 5em !important;
+  height: 5em !important;
+ 
+} */
+
+/* #root
+  > div.App
+  > div.maincontent_flex
+  > div.uf_grid
+  > div.filedrop_box
+  > div.filedrop_button
+  > span
+  > button {
+  width: 5em;
+  height: 5em;
+  opacity: 0;
+} */

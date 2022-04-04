@@ -1,0 +1,47 @@
+.equipment_list {
+  color: blue;
+}
+#equipment_links {
+  color: #136ef6 !important;
+  text-decoration: none;
+  font-size: 16px;
+}
+.yellowInfoPanel ul {
+  background-color: #fff7df;
+  padding: 8px;
+  margin: 12px;
+  list-style-position: inside;
+}
+.yellowInfoPanel ul li::marker {
+  padding: 20px;
+}
+.qtyColumn {
+  max-width: 100px !important;
+  margin: 0 0 0 3em;
+  text-align: left;
+}
+.orderReviewController {
+  display: inline-flex;
+}
+.yeslabel {
+  margin-right: 3%;
+}
+
+#qty_line {
+  margin-right: 3em;
+  margin-left: 3em;
+  font-size: 18px;
+}
+.topBar_row {
+  width: 50px;
+  flex-wrap: nowrap;
+  display: inline-block;
+}
+.qty_header{
+  margin-left: 2.5em;
+  margin-right: 2.5em;
+  font-size: 18px;
+}
+.productName_header {
+  font-size: 18px;
+}
