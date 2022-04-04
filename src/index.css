@@ -1,228 +1,228 @@
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 @font-face {
-  font-family: "SofiaPro-Regular";
-  src: local("SofiaPro-Regular"),
+    font-family: "SofiaPro-Regular";
+    src: local("SofiaPro-Regular"),
     url(./fonts/SofiaPro-Regular.otf) format("opentype");
 }
 @font-face {
-  font-family: "SofiaPro-Bold";
-  src: local("SofiaPro-Bold"), url(./fonts/SofiaPro-Bold.otf) format("opentype");
+    font-family: "SofiaPro-Bold";
+    src: local("SofiaPro-Bold"), url(./fonts/SofiaPro-Bold.otf) format("opentype");
 }
 @font-face {
-  font-family: "SofiaPro-Light";
-  src: local("SofiaPro-Light"),
+    font-family: "SofiaPro-Light";
+    src: local("SofiaPro-Light"),
     url(./fonts/SofiaPro-Light.otf) format("opentype");
 }
 @font-face {
-  font-family: "SofiaPro-Medium";
-  src: local("SofiaPro-Medium"),
+    font-family: "SofiaPro-Medium";
+    src: local("SofiaPro-Medium"),
     url(./fonts/SofiaPro-Medium.otf) format("opentype");
 }
 @font-face {
-  font-family: "SofiaPro-SemiBold";
-  src: local("SofiaPro-SemiBold"),
+    font-family: "SofiaPro-SemiBold";
+    src: local("SofiaPro-SemiBold"),
     url(./fonts/SofiaPro-SemiBold.otf) format("opentype");
 }
 
 /* ~~~~~~~~~~~~ General ~~~~~~~~~~~~ */
 h1{
-  color:#136ef6;
-  font-family: "SofiaPro-SemiBold";
+    color:#136ef6;
+    font-family: "SofiaPro-SemiBold";
 }
 
 h2{
-  font-family: "SofiaPro-SemiBold";
+    font-family: "SofiaPro-SemiBold";
 }
 
 p{
-  font-family: "SofiaPro-Regular";
+    font-family: "SofiaPro-Regular";
 }
 
 /* ~~~~~~~~~~~~ Buttons ~~~~~~~~~~~~ */
 
 .blueButton {
-  float: right;
-  text-align: center;
-  align-self: center;
-  font-family: "SofiaPro-Regular";
-  font-size: 20px;
-  background: #136ef6;
-  border: none;
-  color: #fff;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+    float: right;
+    text-align: center;
+    align-self: center;
+    font-family: "SofiaPro-Regular";
+    font-size: 20px;
+    background: #136ef6;
+    border: none;
+    color: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .blueButton:hover {
-  background: #0f57c2;
-  color: #fff;
+    background: #0f57c2;
+    color: #fff;
 }
 
 .whiteButton {
-  float: left;
-  text-align: center;
-  align-self: center;
-  font-family: "SofiaPro-Regular";
-  font-size: 20px;
-  background: #fff;
-  border: none;
-  color: #000;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border: solid 1px #999999;
+    float: left;
+    text-align: center;
+    align-self: center;
+    font-family: "SofiaPro-Regular";
+    font-size: 20px;
+    background: #fff;
+    border: none;
+    color: #000;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: solid 1px #999999;
 }
 
 .whiteButton:hover {
-  background: #f4f4f4;
+    background: #f4f4f4;
 }
 
 .dummyButton{
-  background-color: #fff;
-  border: none;
-  cursor: default !important;
+    background-color: #fff;
+    border: none;
+    cursor: default !important;
 }
 
 .repeaterAdd{
-  /* display: flex; */
-  font-family: "SofiaPro-SemiBold";
-  justify-content: center !important;
-  align-items: center !important;
-  background-color: #fff !important;
-  color: #136ef6 !important;
-  border: none !important;
-  font-weight: bold;
-  width: 150px !important;
+    /* display: flex; */
+    font-family: "SofiaPro-SemiBold";
+    justify-content: center !important;
+    align-items: center !important;
+    background-color: #fff !important;
+    color: #136ef6 !important;
+    border: none !important;
+    font-weight: bold;
+    width: 150px !important;
 }
 
 .repeaterAdd:hover{
-  color: #0f57c2 !important;
+    color: #0f57c2 !important;
 }
 
 .repeaterAdd svg{
-  margin-right: 5px !important;
+    margin-right: 5px !important;
 }
 
 /* ~~~~~~~~~~~~ Header/Nav ~~~~~~~~~~~~ */
 .navHeader{
-  z-index: 10;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
+    z-index: 10;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
 }
 
 .navHeader .MuiPaper-root{
-  background-color: #000;
-  color: #fff;
-  padding: 10px 10px 10px 80px;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 10px 10px 80px;
 }
 
 .navHeader .MuiAccordionSummary-expandIconWrapper{
-  color: white;
+    color: white;
 }
 
 .navTitle{
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  padding: 0 1rem;
-  height: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
 }
 
 .navCollapsed{
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  justify-content: center;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
 }
 
 .navLink{
-  display: flex;
-  color: #fff;
-  align-items: center;
-  text-decoration: none;
-  padding: 0 1rem;
-  height: 100%;
-  cursor: pointer;
+    display: flex;
+    color: #fff;
+    align-items: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+    cursor: pointer;
 }
 
 .navExpanded{
-  display: flex;
-  flex-direction: row;
+    display: flex;
+    flex-direction: row;
 }
 
 .navSection{
-  display: flex;
-  flex-direction: column;
-  width: 30%;
-  padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    padding: 0px 20px;
 }
 
 .navSection .navTitle{
-  padding: 0;
+    padding: 0;
 }
 
 .navSubText{
-  color:#999999;
-  padding-bottom: 25px;
+    color:#999999;
+    padding-bottom: 25px;
 }
 
 .navButton{
-  background-color: #000;
-  color: #fff;
-  border: solid 1px #999999;
-  align-items: center;
-  text-decoration: none;
-  padding: 0 1rem;
-  cursor: pointer;
-  margin: 0 auto;
+    background-color: #000;
+    color: #fff;
+    border: solid 1px #999999;
+    align-items: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    cursor: pointer;
+    margin: 0 auto;
 }
 
 .navButtonContainer{
-  display: flex;
+    display: flex;
 }
 
 .navButtonContainer .navButton{
-  display: flex;
-  border: none;
-  width: 50%;
+    display: flex;
+    border: none;
+    width: 50%;
 }
 
 .navBorder{
-  border-left: solid 1px #999999;
+    border-left: solid 1px #999999;
 }
 
 /* ~~~~~~~~~~~~ Footer ~~~~~~~~~~~~ */
 
 .footerDateBox label{
-  color: #999999;
+    color: #999999;
 }
 
 .footerDateBox input{
-  color: #fff;
+    color: #fff;
 }
 
 .footerDateBox fieldset{
-  border: solid 1px #fff;
+    border: solid 1px #fff;
 }
 
 .footerDateBox button{
-  background-color: #136ef6;
-  color: #fff;
+    background-color: #136ef6;
+    color: #fff;
 }
 
 .footerDateBox fieldset{
-  border: solid 1px #999999;
+    border: solid 1px #999999;
 }
 
 .footerDateBox .MuiFormControl-root{
-  margin: 10px;
+    margin: 10px;
 }
 
 
@@ -230,28 +230,28 @@ p{
 /* ~~~~~~~~~~~~ Process Bar ~~~~~~~~~~~~ */
 
 .circle {
-  width: 29px;
-  height: 29px;
-  line-height: 25px;
-  background-color: #999999;
-  color: #fff;
-  border-radius: 50%;
-  border: 2px solid tranparent;
-  justify-content: center;
-  margin: 0 auto;
+    width: 29px;
+    height: 29px;
+    line-height: 25px;
+    background-color: #999999;
+    color: #fff;
+    border-radius: 50%;
+    border: 2px solid tranparent;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .stepContainer {
-  background-color: #f4f4f4;
-  justify-content: center;
-  padding-top: 10px;
+    background-color: #f4f4f4;
+    justify-content: center;
+    padding-top: 10px;
 }
 
 .stepWrapper {
-  display: flex;
-  margin-bottom: 20px;
-  padding: 10px 80px;
-  justify-content: center;
+    display: flex;
+    margin-bottom: 20px;
+    padding: 10px 80px;
+    justify-content: center;
 }
 
 /* .circleWrapper
@@ -260,36 +260,36 @@ p{
 } */
 
 .stepBlock {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 20%;
-  margin: 0px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 20%;
+    margin: 0px 10px;
 }
 
 .stepTitle {
-  display: flex;
-  width: 100%;
-  justify-content: center;
+    display: flex;
+    width: 100%;
+    justify-content: center;
 }
 
 .progressTitle {
-  display: flex;
-  color: #136ef6;
-  font-size: 28px;
-  font-family: "SofiaPro-SemiBold";
-  justify-content: center;
+    display: flex;
+    color: #136ef6;
+    font-size: 28px;
+    font-family: "SofiaPro-SemiBold";
+    justify-content: center;
 }
 
 .circleContent {
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .selected .circle {
-  color: #fff;
-  background-color: #136ef6;
+    color: #fff;
+    background-color: #136ef6;
 }
 
 /* .stepBlock:not(:last-child) > .circleWrapper::after
@@ -308,7 +308,7 @@ p{
 /* .stepBlock:not(:last-child) > .circleWrapper::after
 {
   height: 3px;
-} 
+}
 
 .stepBlock:not(:last-child).selected, .stepBlock:not(:last-child).selected ~ .stepBlock:not(:last-child) > .circleWrapper::after
 {
@@ -317,30 +317,30 @@ p{
 
 /* ~~~~~~~~~~~~ Thank You Page ~~~~~~~~~~~~ */
 .thankYou{
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .thankYou h2{
-  padding: 25px 0px;
-  margin-top: 20px;
+    padding: 25px 0px;
+    margin-top: 20px;
 }
 
 .thanksSummary{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding: 25px 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 25px 80px;
 }
 
 .thanksSummary .form-floating{
-  margin: 0px 20px;
+    margin: 0px 20px;
 }
 
 .thanksSummary .MuiFormControl-root{
-  margin: 0px 20px;
+    margin: 0px 20px;
 }
 
 .thanksSummary #businessName_BA{
-  width: 300px;
+    width: 300px;
 }
