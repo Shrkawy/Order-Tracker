@@ -6,7 +6,7 @@ $primary: #136EF6;
 
 .line {
   border-left: 2px dotted $dark;
-  height: 80%;
+  height: 75%;
   z-index: 0;
   position: absolute;
 }
@@ -25,6 +25,13 @@ $primary: #136EF6;
     justify-content: center;
     align-items: center;
 
+    .icon{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $light;
+    }
+
     .icon img {
       width: 12px;
       height: 12px;
@@ -35,6 +42,12 @@ $primary: #136EF6;
   .circle-filled {
     background: #6BCB77;
     border: 2px solid #6BCB77;
+  }
+
+  .circle-red {
+    background: #E83A14;
+    border: 2px solid #E83A14;
+    color: $light;
   }
 
   .step {
