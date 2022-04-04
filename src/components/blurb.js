@@ -1,6 +1,6 @@
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSpinner, faPause, faCheck } from "@fortawesome/free-solid-svg-icons";
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSpinner, faPause, faCheck } from '@fortawesome/free-solid-svg-icons';
 
 const BlurbList = (props) => {
   return props.list.map((blurb, index) => {
@@ -8,22 +8,22 @@ const BlurbList = (props) => {
       <div key={index} className="step d-flex">
         <div
           style={{
-            width: "30px",
-            zIndex: "+5",
-            background: index === props.list.length - 1 ? "#ffffff" : ""
+            width: '30px',
+            zIndex: '+5',
+            background: index === props.list.length - 1 ? '#ffffff' : '',
           }}
         >
           {blurb.IsComplete ? (
             <div className="circle circle-filled">
               <div className="icon">
-                <FontAwesomeIcon style={{ width: "12px" }} icon={faCheck} />
+                <FontAwesomeIcon style={{ width: '12px' }} icon={faCheck} />
               </div>
             </div>
           ) : blurb.IsCurrent ? (
             <div className="circle">
               <div className="icon">
                 <FontAwesomeIcon
-                  style={{ width: "13px", color: "#136EF6" }}
+                  style={{ width: '13px', color: '#136EF6' }}
                   icon={faSpinner}
                   spin
                 />
@@ -32,7 +32,7 @@ const BlurbList = (props) => {
           ) : blurb.isSuspended ? (
             <div className="circle circle-red">
               <div className="icon">
-                <FontAwesomeIcon style={{ width: "10px" }} icon={faPause} />
+                <FontAwesomeIcon style={{ width: '10px' }} icon={faPause} />
               </div>
             </div>
           ) : (
